@@ -1,12 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 
+
 //components 
 import Home from './pages/Home'
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Footer from './components/Footer';
 
+//style
+import './SASS/App.scss';
 
 
 const App = () => {
@@ -35,12 +38,16 @@ const App = () => {
                 </>
               ): (
                 <>
-                 <Link to="/signup"><div className="session-button" id="sign-up">signup</div></Link>
+                  <Link to="/signup"><div className="session-button" id="sign-up">signup</div></Link>
                   <Link to="/login"><div className="session-button" id="login">login</div></Link>
                 </>
               )
             }
           </div> */}
+        <div className='user-wrap'>
+          <Link to="/signup"><div className="session-button" id="sign-up">signup</div></Link>
+          <Link to="/login"><div className="session-button" id="login">login</div></Link>
+        </div>
         </div>
         {/* {
           searchResults ? (
