@@ -1,19 +1,22 @@
-.home {
-    position: relative;
-    overflow: hidden;
-    .background-pic {
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background-color: red;
-    }
-    .overlay {
+
+@media (min-width: 375px) {
+    .home {
         position: relative;
-        height: 55vh;
-        width: 100vw;
         overflow: hidden;
+        .background-pic {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: aqua;
+        }
+        .overlay {
+            position: relative;
+            height: 65vh;
+            width: 100vw;
+            overflow: hidden;
+        }
     }
 }

@@ -11,8 +11,7 @@ let navagate = useNavigate()
       <div className="home">
         <div className="background-pic"></div>
         <div className="overlay">
-            
-
+            <a href='https://slayitkita.square.site/'  target='_blank' className='book-now'>Book now</a>
         </div>
       </div>
 
