@@ -11,25 +11,10 @@ import Footer from './components/Footer';
 
 //style
 import './SASS/App.scss';
+import BookingRules from './components/BookingRules';
 
 
 const App = () => {
-  const reverse = {
-    transform: 'rotate(-45deg) translate(-7px, 5px)',
-    transition: '.5s'
-  }
-  const reversetwo = {
-    transform: 'rotate(45deg)',
-    transition: '.5s'
-  }
-
-  const disapear =  {
-    display: 'none',
-    opacity: '0',
-    transition: '.5s',
-    overflow: 'hidden'
-  }
-
   let [showNav, setShowNAv] = useState(false)
 
   const toggleNav = () => {
@@ -88,6 +73,7 @@ const App = () => {
           <Route path="/login" element={<Login/>}/>
         </Routes>
       </Router>
+      <BookingRules/>
       <Footer />
     </div>
   )

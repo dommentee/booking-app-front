@@ -8,12 +8,16 @@ const Home = (props: any ) => {
 
 let navagate = useNavigate()
   return (
-      <div className="home">
-        <div className="background-pic"></div>
-        <div className="overlay">
-            <a href='https://slayitkita.square.site/'  target='_blank' className='book-now'>Book now</a>
+      <>
+        <div className="home">
+            <div className="background-pic"></div>
+            <div className="overlay">
+                <a href='https://slayitkita.square.site/'  target='_blank' className='book-now'>Book now</a>
+            </div>
+        
         </div>
-      </div>
+        <div className="banner">LICENSEd HAIR STYLIST</div>
+      </>
 
   )
 }
