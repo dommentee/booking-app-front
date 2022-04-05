@@ -72,8 +72,10 @@ const App = () => {
         {
           showNav ? (
             <div className="mobile-nav">
-              <a className="about-link" href="#">About</a>
-              <a className="portfolio-link" href="#">Portfolio</a>
+              <a className="about-link" href="#">Services</a>
+              <a className="portfolio-link" href="#">About</a>
+              <a className="portfolio-link" href="#">Contact</a>
+              <a href='https://slayitkita.square.site/'  target='_blank' className='book-now'>Book now</a>
             </div>
 
           ):<div className="hidden"></div>
