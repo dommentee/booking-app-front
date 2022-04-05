@@ -76,7 +76,7 @@ const App = () => {
               <a className="portfolio-link" href="#">Portfolio</a>
             </div>
 
-          ):<></>
+          ):<div className="hidden"></div>
         }
         <Routes>
           <Route path="/" element={

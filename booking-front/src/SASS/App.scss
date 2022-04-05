@@ -4,13 +4,14 @@
 
 
 @media (min-width: 375px) {
+    
     .header {
         width: 100%;
         padding: 16px 2%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // background-color: grey;
+        background-color: #EDEDED;
         font-size: .9em;
         a {
           text-decoration: none;
@@ -59,16 +60,14 @@
             }
         }
         .bar{
-            // width: 35px;
-            // height: 1.5px;
-            // margin: 4px 0;
-            // background-color: #134564;
-            // transition: 0.5s;
             width: 35px;
             height: 2px;
             margin: 4px 0;
-            background-color: #387094;
+            background-color: #B76E79;
             transition: 0.5s;
+            &:hover {
+                cursor: pointer;
+            }
         }
         #barone {
             display: none;
@@ -84,17 +83,32 @@
             transform: rotate(40deg);
             transition: .5s
         }
+        .hamburger-menu {
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
     .mobile-nav {
-        background-color: rgb(255, 0, 242);
         height: 100vh;
         width: 100%;
         z-index: 1;
         position: fixed;
-        overflow: auto;
-        background-color: aliceblue;
+        overflow: hidden;
+        transition: .5s ease-in-out;
+        background-color: #EDEDED;
 
     }
+    .hidden {
+        width: 0;
+        height: 100%;
+        float: right;
+        background-color: #e7e7e7;
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        transition: .5s ease-in-out;
+    }   
 
   
 }

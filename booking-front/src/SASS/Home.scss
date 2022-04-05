@@ -1,4 +1,5 @@
 
+
 @media (min-width: 375px) {
     .home {
         position: relative;
@@ -17,6 +18,34 @@
             height: 65vh;
             width: 100vw;
             overflow: hidden;
+            display: flex;
+            .book-now {
+                align-self: center;
+                margin: 0 auto;
+                text-decoration: none;
+                padding: 14px 120px;
+                // background-color: #B76E79;
+                border: 2px solid #B76E79;
+                color: #B76E79;
+                border-radius: 5px;
+
+                @keyframes pulse {
+                    0% { box-shadow: 0 0 0 0 #B76E79; };
+                }
+
+                &:hover {
+                    animation: pulse 1s;
+                    box-shadow: 0 0 0 2em transparent;
+                }
+                // &:hover {
+                //     transition: 1s ease-in-out;
+                //     box-shadow: inset 0 0 0 2em #B76E79;
+                //     color: #EDEDED
+                // }
+
+
+
+            }
         }
     }
 }
