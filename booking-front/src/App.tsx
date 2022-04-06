@@ -30,7 +30,7 @@ const App = () => {
     
     <div className="container">
       <Router>
-        <div className="header">
+        <div className="header sticky">
           <div className="search-form-warp">
             <Link to="/"><div className="home-button">SlayItKita</div></Link>
           </div>
