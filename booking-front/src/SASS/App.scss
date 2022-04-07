@@ -64,7 +64,7 @@
             height: 2px;
             margin: 4px 0;
             background-color: #B76E79;
-            transition: 0.5s;
+            transition: 0.2s;
             &:hover {
                 cursor: pointer;
             }
@@ -72,16 +72,16 @@
         #barone {
             display: none;
             opacity: 0;
-            transition: .5s;
+            transition: .2s;
             overflow: hidden;
         }
         #bartwo {
             transform: rotate(-40deg) translate(-5px, 5px);
-            transition: .5s;
+            transition: .2s;
         }
         #barthree {
             transform: rotate(40deg);
-            transition: .5s
+            transition: .2s
         }
         .hamburger-menu {
             &:hover {
@@ -100,7 +100,7 @@
         z-index: 1;
         position: fixed;
         overflow: hidden;
-        transition: .5s ease-in-out;
+        transition: .2s ease-in-out;
         background-color: #EDEDED;
         display: flex;
         flex-direction: column;
@@ -153,8 +153,19 @@
         overflow: hidden;
         position: absolute;
         z-index: 1;
-        transition: .5s ease-in-out;
-    }   
+        transition: .2s ease-in-out;
+    }  
+    .closing-banner {
+        h4 {
+            // color:#6eb6ab;
+            text-align: center;
+
+            padding: 100px 0;
+            background-color: #B76E79;
+            
+        }
+    }
+    
 
   
 }

@@ -72,7 +72,7 @@ const BookingRules = () => {
 
                 </p>
             </div>
-            <h2>Thank you!!</h2>
+            {/* <h2>Thank you!!</h2> */}
         </div>
     )
 }

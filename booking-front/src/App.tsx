@@ -74,6 +74,12 @@ const App = () => {
         </Routes>
       </Router>
       <BookingRules/>
+      <div className='closing-banner'>
+        <h4>Thankyou for being
+          <br></br>
+           Slayed By Kita
+          </h4>
+      </div>
       <Footer />
     </div>
   )

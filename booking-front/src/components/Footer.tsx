@@ -1,12 +1,16 @@
 import React from "react";
 
+import '../SASS/Footer.scss'
+
 const Footer = () => {
     return (
         <div className="footer">
-            <span className="name">SLayITKita</span>
-		    <div className="developer">
-			    <a href="https://domacor.netlify.app" target="_blank"> Domacor Mentee </a>
-		    </div>	
+            <div className="home-button">SlayItKita</div>
+            <i className="fa-solid fa-location-dot"></i>
+            <span className="location">Randolph Ma</span>
+            <br></br>
+			<span id="by">made by</span><a href="https://domacor.netlify.app" target="_blank"> Domacor Mentee </a>
+
 
         </div>
     )
