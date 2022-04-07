@@ -8,6 +8,32 @@
         color: #D4af37;
         font-weight: 500;
     }
+    .rule {
+        padding: 15px 0;
+        h3 {
+            background-color: #6eb6ab;
+            color:  #fafafa;
+            font-size: 1.8em;
+            padding: 6px 0;
+            // background-color: #D4af37;
+            // border: 4px solid #D4af37 ;
+    
+        }
+        div {
+            width: 45px;
+            height: 4px;
+            background-color:#D4af37;
+            margin: 0 auto;
+        }
+        p {
+            padding: 10px 0;
+            font-size: 1.1em;
+        }
+
+    }
+    h2 {
+        color:#6eb6ab
+    }
 
 
 }
