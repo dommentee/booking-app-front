@@ -11,7 +11,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #EDEDED;
+        // background: -webkit-linear-gradient( #fcfafa, #fcfbfb);
+        background-color: #f3f3f3;
+        // background-color: #fafafa;
         font-size: .9em;
         a {
           text-decoration: none;
@@ -27,37 +29,8 @@
             cursor: pointer;
           }
         }
-        .user-wrap {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: .9em;
-        
-            .session-button {
-              padding: 5px 8px;
-              border: 2.5px solid transparent;
-              border-radius: 3px;
-              cursor: pointer;
-            }
-            #sign-up {
-              border: 2.5px solid transparent; 
-              &:hover {
-                transition: .5s;
-                border-bottom: 2.5px solid  rgba(226, 69, 41, 0.884);
-              }
-            }
-        
-            #login {
-              margin-left: 6px;
-              &:hover {
-                border-bottom: 2.5px solid  rgba(68, 70, 230, 0.884); 
-              }
-            }
-            .book-now {
-                background-color: rgb(0, 162, 255);
-                padding: 6px 12px
-
-            }
+        .desktop-nav {
+            display: none;
         }
         .bar{
             width: 35px;
@@ -168,4 +141,48 @@
     
 
   
+}
+
+@media (min-width: 1024px) {
+    .header {
+        .desktop-nav {
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: .9em;
+        
+            .session-button {
+              padding: 5px 8px;
+              border: 2.5px solid transparent;
+              border-radius: 3px;
+              cursor: pointer;
+            }
+            #sign-up {
+              border: 2.5px solid transparent; 
+              &:hover {
+                transition: .5s;
+                border-bottom: 2.5px solid  rgba(226, 69, 41, 0.884);
+              }
+            }
+        
+            #login {
+              margin-left: 6px;
+              &:hover {
+                border-bottom: 2.5px solid  rgba(68, 70, 230, 0.884); 
+              }
+            }
+            .book-now {
+                background-color: rgb(0, 162, 255);
+                padding: 10px 25px;
+                color: #e7e7e7;
+            }
+        }
+        .hamburger-menu {
+            display: none;
+        } 
+
+    }
+   
+
 }

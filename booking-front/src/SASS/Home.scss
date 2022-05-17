@@ -12,7 +12,11 @@
             right: 0;
             left: 0;
             // background-color: aqua;
-
+            background: url(../../public/images/kita-web.jpg);
+            background-repeat: no-repeat;
+            position: center;
+            background-position: center center;
+            background-size: cover;
 
         }
         .overlay {
