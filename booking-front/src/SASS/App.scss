@@ -36,7 +36,8 @@
             width: 35px;
             height: 2px;
             margin: 4px 0;
-            background-color: #B76E79;
+            // background-color: #B76E79;
+            background-color: #E26678;
             transition: 0.2s;
             &:hover {
                 cursor: pointer;
@@ -75,12 +76,14 @@
         overflow: hidden;
         transition: .2s ease-in-out;
         background-color: #EDEDED;
+        background: -webkit-linear-gradient( #fcfafa, #fcfbfb);
         display: flex;
         flex-direction: column;
         align-items: center;
 
         .book-now {
-            background-color: #B76E79;
+            // background-color: #B76E79;
+            background-color: #E26678;
             // border: 2px solid #B76E79;
             // color: #B76E79;
             color: #EDEDED;
@@ -134,7 +137,9 @@
             text-align: center;
 
             padding: 100px 0;
-            background-color: #B76E79;
+            // background-color: #B76E79;
+            background-color: #E26678;
+            // background-color: linear-gradient( #E26678 );
             
         }
     }

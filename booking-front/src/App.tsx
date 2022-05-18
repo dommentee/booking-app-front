@@ -25,6 +25,13 @@ const App = () => {
     }
     
   }
+  const noNav = () => {
+    if(showNav === true) {
+      setShowNAv(false)
+    }else {
+      return
+    }
+  }
 
   return (
     
@@ -32,7 +39,7 @@ const App = () => {
       <Router>
         <div className="header sticky">
           <div className="search-form-warp">
-            <Link to="/"><div className="home-button">SlayItKita</div></Link>
+            <Link to="/"><div className="home-button"  onClick={noNav}>SlayItKita</div></Link>
           </div>
           <div className='desktop-nav'>
             <Link to="/housekeeping"><div className="nav-button">House Rules</div></Link>
