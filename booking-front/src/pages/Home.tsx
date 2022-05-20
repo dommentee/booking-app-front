@@ -11,10 +11,19 @@ const Home = (props: any ) => {
       <div className="home">
         <div className="background-pic"></div>
           <div className="overlay">
-            <a href='https://slayitkita.square.site/'  target='_blank' className='book-now'>Book now</a>
+            <p>
+              <span>LICENSED HAIR STYLIST</span>
+              <br/>
+              <a>
+                Bringing you the TLC 
+                that enhances your Beauty
+                in Boston / Atlanta area
+              </a>
+            </p>
+            {/* <a href='https://slayitkita.square.site/'  target='_blank' className='book-now'>Book now</a> */}
           </div>        
         </div>
-        <div className="banner">LICENSEd HAIR STYLIST</div>
+        {/* <div className="banner">LICENSEd HAIR STYLIST</div> */}
         <div className="hero">
             
         </div>

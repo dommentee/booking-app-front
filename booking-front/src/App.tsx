@@ -87,10 +87,14 @@ const App = () => {
         </Routes>
       </Router>
       <div className='closing-banner'>
-        <h4>Thankyou for being
-          <br></br>
-           Slayed By Kita
-          </h4>
+        <h4>
+          Thankyou for being
+          <br/>
+          Slayed By Kita
+        </h4>
+        <a href='https://slayitkita.square.site/'  target='_blank' className='book-now'>Book Boston</a>
+        <a href='https://www.styleseat.com/m/v/slayitkita?proId=1931865'  target='_blank' className='book-now'>Book Atlanta</a>
+
       </div>
       <Footer />
     </div>
