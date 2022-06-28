@@ -1,0 +1,17 @@
+.Hero {
+
+    padding: 78px 4%;
+    // display: flex;
+    .speciality {
+        width: 100%;
+        background-color: yellow;
+        margin: 0 0 30px 0;
+        .overlay {
+            padding: 190px 0;
+            background-color: rgba(0, 0, 0, 0.445);
+            text-align: center;
+            color: #fafafa;
+        }
+
+    }
+}

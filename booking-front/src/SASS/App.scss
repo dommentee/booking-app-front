@@ -7,14 +7,14 @@
     
     .header {
         width: 100%;
-        padding: 16px 2%;
+        padding: 12px 4%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         // background: -webkit-linear-gradient( #fcfafa, #fcfbfb);
         background-color: #f3f3f3;
         // background-color: #fafafa;
-        font-size: .9em;
+        font-size: 1em;
         a {
           text-decoration: none;
           color: #3D3D3D;
@@ -22,7 +22,7 @@
         .home-button {
           font-weight: bolder;
           font-size: 1.2em;
-          font-family: 'Pacifico', cursive;
+        //   font-family: 'Pacifico', cursive;
         //   font-family: 'Alfa Slab One', cursive;
           &:hover {
            color:  rgba(68, 70, 230, 0.884); 
@@ -33,7 +33,7 @@
             display: none;
         }
         .bar{
-            width: 30px;
+            width: 28px;
             height: 2px;
             margin: 5px 0;
             // background-color: #B76E79;
@@ -103,7 +103,6 @@
             //     box-shadow: inset 0 0 0 2em #B76E79;
             //     color: #EDEDED
             // }
-
         }
     
         a {

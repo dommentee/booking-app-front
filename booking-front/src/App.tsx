@@ -5,6 +5,7 @@ import { useState, useEffect  } from 'react';
 
 //components 
 import Home from './pages/Home'
+import Hero from './components/Hero'
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Footer from './components/Footer';
@@ -39,7 +40,7 @@ const App = () => {
       <Router>
         <div className="header sticky">
           <div className="search-form-warp">
-            <Link to="/"><div className="home-button"  onClick={noNav}>SlayItKita</div></Link>
+            <Link to="/"><div className="home-button"  onClick={noNav}>S.I.K</div></Link>
           </div>
           <div className='desktop-nav'>
             <Link to="/housekeeping"><div className="nav-button">House Rules</div></Link>
@@ -86,6 +87,7 @@ const App = () => {
           <Route path="/housekeeping" element={<BookingRules/>}/>
         </Routes>
       </Router>
+      <Hero/>
       <div className='closing-banner'>
         <h4>
           Thankyou for being

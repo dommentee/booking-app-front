@@ -14,19 +14,16 @@ const Home = (props: any ) => {
             <p>
               <span>LICENSED HAIR STYLIST</span>
               <br/>
-              <a>
-                Bringing you the TLC 
-                that enhances your Beauty
-                in Boston / Atlanta area
-              </a>
+              <br/> 
+              <p className="inner-p">
+                Bringing your hair some TLC 
+                in the <br/> Boston / Atlanta area
+              </p>
             </p>
             {/* <a href='https://slayitkita.square.site/'  target='_blank' className='book-now'>Book now</a> */}
           </div>        
         </div>
         {/* <div className="banner">LICENSEd HAIR STYLIST</div> */}
-        <div className="hero">
-            
-        </div>
       </>
 
   )
