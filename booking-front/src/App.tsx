@@ -37,7 +37,6 @@ const App = () => {
   return (
     
     <div className="container">
-      <Router>
         <div className="header sticky">
           <div className="search-form-warp">
             <Link to="/"><div className="home-button"  onClick={noNav}>S.I.K</div></Link>
@@ -45,8 +44,8 @@ const App = () => {
           <div className='desktop-nav'>
             <Link to="/housekeeping"><div className="nav-button">House Rules</div></Link>
             <a href='https://slayitkita.square.site/'  target='_blank' className='book-now'>Book now</a>
-            {/* <Link to="/signup"><div className="session-button" id="sign-up">signup</div></Link>
-            <Link to="/login"><div className="session-button" id="login">login</div></Link> */}
+            <Link to="/signup"><div className="session-button" id="sign-up">signup</div></Link>
+            <Link to="/login"><div className="session-button" id="login">login</div></Link>
           </div>
 
             {/* <div className='user-wrap'>
@@ -74,6 +73,8 @@ const App = () => {
             <div className="mobile-nav">
                <Link to="/housekeeping"><div className="nav-button" onClick={toggleNav}>House Rules</div></Link>
               <a href='https://slayitkita.square.site/'  target='_blank' className='book-now' onClick={toggleNav}>Book now</a>
+              <Link to="/signup"><div className="session-button" id="sign-up" onClick={toggleNav}>signup</div></Link>
+              <Link to="/login"><div className="session-button" id="login" onClick={toggleNav}>login</div></Link>
             </div>
 
           ):<div className="hidden"></div>
@@ -86,9 +87,7 @@ const App = () => {
           <Route path="/login" element={<Login/>}/>
           <Route path="/housekeeping" element={<BookingRules/>}/>
         </Routes>
-      </Router>
-      <Hero/>
-      <div className='closing-banner'>
+      {/* <div className='closing-banner'>
         <h4>
           Thankyou for being
           <br/>
@@ -97,7 +96,7 @@ const App = () => {
         <a href='https://slayitkita.square.site/'  target='_blank' className='book-now'>Book Boston</a>
         <a href='https://www.styleseat.com/m/v/slayitkita?proId=1931865'  target='_blank' className='book-now'>Book Atlanta</a>
 
-      </div>
+      </div> */}
       <Footer />
     </div>
   )
