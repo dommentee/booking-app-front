@@ -11,8 +11,9 @@
             bottom: 0;
             right: 0;
             left: 0;
-            // background-color: aqua;
-            background: url(../../public/images/kita-web.jpg);
+            background-color: aqua;
+            // background: url(../../public/images/kita-web.jpg);
+            // background: url('../../public/images/nikita-logo1.png');
             background-repeat: no-repeat;
             position: center;
             background-position: center center;
@@ -25,7 +26,7 @@
             width: 100vw;
             overflow: hidden;
             display: flex;
-            background-color: rgba(0, 0, 0, 0.445);
+            background-color: rgba(6, 6, 6, 0.368);
 
             p {
                 align-self: center;

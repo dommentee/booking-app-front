@@ -16,16 +16,17 @@ import BookingRules from './components/BookingRules';
 
 
 const App = () => {
+  //state of mobile nav
   let [showNav, setShowNAv] = useState(false)
-
+  //toggle state of nav
   const toggleNav = () => {
     if (showNav === false) {
       setShowNAv(true)
     } if (showNav === true) {
       setShowNAv(false)
     }
-    
   }
+  //closing nav when link is clicked
   const noNav = () => {
     if(showNav === true) {
       setShowNAv(false)
@@ -35,27 +36,27 @@ const App = () => {
   }
 
   return (
-    
     <div className="container">
-        <div className="header sticky">
-          <div className="search-form-warp">
-            <Link to="/"><div className="home-button"  onClick={noNav}>S.I.K</div></Link>
-          </div>
-          <div className='desktop-nav'>
-            <Link to="/housekeeping"><div className="nav-button">House Rules</div></Link>
-            <a href='https://slayitkita.square.site/'  target='_blank' className='book-now'>Book now</a>
+      {/* kept the header in the app component to keep the model mobile nav relative to the container so it can float under header */}
+      <div className="header sticky">
+        <Link to="/"><div className="home-button" onClick={noNav}></div></Link>
+        <div className='desktop-nav'>
+          <Link to="/housekeeping"><div className="nav-button">House Rules</div></Link>
+          <a href='https://slayitkita.square.site/'  target='_blank' className='book-now'>Book now</a>
+          <Link to="/signup"><div className="session-button" id="sign-up">signup</div></Link>
+          <Link to="/login"><div className="session-button" id="login">login</div></Link>
+        </div>
+
+          {/* <div className='user-wrap'>
+            <a href='https://slayitkita.square.site/'className='book-now'>Book now</a>
             <Link to="/signup"><div className="session-button" id="sign-up">signup</div></Link>
             <Link to="/login"><div className="session-button" id="login">login</div></Link>
-          </div>
+            </div> */
+          }
 
-            {/* <div className='user-wrap'>
-              <a href='https://slayitkita.square.site/'className='book-now'>Book now</a>
-              <Link to="/signup"><div className="session-button" id="sign-up">signup</div></Link>
-              <Link to="/login"><div className="session-button" id="login">login</div></Link>
-            </div> */}
-            {
-              showNav ? (
-                <div className="hamburger-menu" onClick={toggleNav}>
+          {
+            showNav ? (
+              <div className="hamburger-menu" onClick={toggleNav}>
                 <div className="bar" id="barone" ></div>
                 <div className="bar" id="bartwo"></div>
                 <div className="bar" id="barthree"></div>
@@ -65,13 +66,15 @@ const App = () => {
                   <div className="bar"></div>
                   <div className="bar"></div>
                 </div>
-            }
+          }
 
         </div>
+        {/* end of header */}
+        {/* show mobile nav */}
         {
           showNav ? (
             <div className="mobile-nav">
-               <Link to="/housekeeping"><div className="nav-button" onClick={toggleNav}>House Rules</div></Link>
+              <Link to="/housekeeping"><div className="nav-button" onClick={toggleNav}>House Rules</div></Link>
               <a href='https://slayitkita.square.site/'  target='_blank' className='book-now' onClick={toggleNav}>Book now</a>
               <Link to="/signup"><div className="session-button" id="sign-up" onClick={toggleNav}>signup</div></Link>
               <Link to="/login"><div className="session-button" id="login" onClick={toggleNav}>login</div></Link>
@@ -79,6 +82,7 @@ const App = () => {
 
           ):<div className="hidden"></div>
         }
+        {/*end of mobile nav */}
         <Routes>
           <Route path="/" element={
             <Home/>

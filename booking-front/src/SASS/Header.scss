@@ -1,36 +1,35 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-
 @media (min-width: 375px) {
     
     .header {
         width: 100%;
-        padding: 5px 4%;
+        padding: 15px 4%;
         display: flex;
-        align-items: center;
+        // align-items: center;
         justify-content: space-between;
         // background: -webkit-linear-gradient( #fcfafa, #fcfbfb);
         background-color: #f3f3f3;
         // background-color: #fafafa;
         font-size: 1em;
+        position: relative;
         a {
-            text-decoration: none;
-            color: #3D3D3D;
+          text-decoration: none;
+          color: #3D3D3D;
         }
         .home-button {
-            padding: 30px;
-            background: url('../../public/images/nikita-logo1.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center center;
+          font-weight: bolder;
+          font-size: 1.2em;
+        //   font-family: 'Pacifico', cursive;
+        //   font-family: 'Alfa Slab One', cursive;
+          &:hover {
+           color:  rgba(68, 70, 230, 0.884); 
+            cursor: pointer;
+          }
         }
         .desktop-nav {
             display: none;
         }
         .bar{
-            width: 30px;
+            width: 28px;
             height: 2px;
             margin: 5px 0;
             // background-color: #B76E79;
@@ -66,11 +65,16 @@
         z-index: 100;
     }
     .mobile-nav {
-        height: 100vh;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
         width: 100%;
         z-index: 1;
+        height: 100vh;
         position: fixed;
         overflow: hidden;
+        float: left;
         transition: .2s ease-in-out;
         background-color: #EDEDED;
         background: -webkit-linear-gradient( #fcfafa, #fcfbfb);
@@ -164,49 +168,3 @@
     }
 }
 
-@media (min-width: 1024px) {
-    .header {
-        .desktop-nav {
-            display: block;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: .9em;
-        
-            .session-button {
-              padding: 5px 8px;
-              border: 2.5px solid transparent;
-              border-radius: 3px;
-              cursor: pointer;
-            }
-            #sign-up {
-              border: 2.5px solid transparent; 
-              &:hover {
-                transition: .5s;
-                border-bottom: 2.5px solid  rgba(226, 69, 41, 0.884);
-              }
-            }
-        
-            #login {
-              margin-left: 6px;
-              &:hover {
-                border-bottom: 2.5px solid  rgba(68, 70, 230, 0.884); 
-              }
-            }
-            .book-now {
-                background-color: rgb(0, 162, 255);
-                padding: 10px 25px;
-                color: #e7e7e7;
-            }
-        }
-        .hamburger-menu {
-            display: none;
-        } 
-
-    }
-    .mobile-nav {
-        display: none;
-    }
-   
-
-}
