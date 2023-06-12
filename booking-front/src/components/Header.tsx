@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import { useState, useEffect  } from 'react';
 
-import '../SASS/Header.scss'
+import '../scss/Header.scss'
 
 const Header = () => {
 

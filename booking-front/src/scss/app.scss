@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+//css for whole app
+//mobile first approach 
+
+//global colors
+:root {
+    --color: #3D3D3D;
+    --background-color: #f3f3f3;
+}
 
 @media (min-width: 375px) {
     
@@ -12,7 +20,7 @@
         align-items: center;
         justify-content: space-between;
         // background: -webkit-linear-gradient( #fcfafa, #fcfbfb);
-        background-color: #f3f3f3;
+        background-color: var(--background-color);
         // background-color: #fafafa;
         font-size: 1em;
         a {
@@ -20,7 +28,7 @@
             color: #3D3D3D;
         }
         .home-button {
-            padding: 30px;
+            padding: 37px;
             background: url('../../public/images/nikita-logo1.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -65,13 +73,12 @@
         top: 0;
         z-index: 100;
     }
-    .mobile-nav {
+    .mobile-nav, .hidden {
         height: 100vh;
-        width: 100%;
         z-index: 1;
         position: fixed;
         overflow: hidden;
-        transition: .2s ease-in-out;
+        transition: width .2s ease-in-out;
         background-color: #EDEDED;
         background: -webkit-linear-gradient( #fcfafa, #fcfbfb);
         display: flex;
@@ -117,16 +124,14 @@
         }
 
     }
+    .mobile-nav {
+        width: 100%;
+    }
+
     .hidden {
-        width: 0;
-        height: 100%;
-        float: right;
-        background-color: #e7e7e7;
-        overflow: hidden;
-        position: absolute;
-        z-index: 1;
-        transition: .2s ease-in-out;
+        width: 0%;
     }  
+    
     .closing-banner {
         background-color: #E26678;
         background: -webkit-linear-gradient( #E26678, #e05c9a,);
@@ -166,6 +171,9 @@
 
 @media (min-width: 1024px) {
     .header {
+        .home-button {
+            padding: 45px;
+        }
         .desktop-nav {
             display: block;
             display: flex;

@@ -9,10 +9,11 @@ import Hero from './components/Hero'
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Footer from './components/Footer';
+import MobileNav from './components/MobileNav';
 
 //style
-import './SASS/App.scss';
-import BookingRules from './components/BookingRules';
+import './scss/app.scss';
+import BookingRules from './pages/BookingRules';
 
 
 const App = () => {
@@ -47,50 +48,42 @@ const App = () => {
           <Link to="/login"><div className="session-button" id="login">login</div></Link>
         </div>
 
-          {/* <div className='user-wrap'>
-            <a href='https://slayitkita.square.site/'className='book-now'>Book now</a>
-            <Link to="/signup"><div className="session-button" id="sign-up">signup</div></Link>
-            <Link to="/login"><div className="session-button" id="login">login</div></Link>
-            </div> */
-          }
-
-          {
-            showNav ? (
-              <div className="hamburger-menu" onClick={toggleNav}>
-                <div className="bar" id="barone" ></div>
-                <div className="bar" id="bartwo"></div>
-                <div className="bar" id="barthree"></div>
-              </div>
-              ):<div className="hamburger-menu" onClick={toggleNav}>
-                  <div className="bar"></div>
-                  <div className="bar"></div>
-                  <div className="bar"></div>
-                </div>
-          }
-
-        </div>
-        {/* end of header */}
-        {/* show mobile nav */}
         {
           showNav ? (
-            <div className="mobile-nav">
-              <Link to="/housekeeping"><div className="nav-button" onClick={toggleNav}>House Rules</div></Link>
-              <a href='https://slayitkita.square.site/'  target='_blank' className='book-now' onClick={toggleNav}>Book now</a>
-              <Link to="/signup"><div className="session-button" id="sign-up" onClick={toggleNav}>signup</div></Link>
-              <Link to="/login"><div className="session-button" id="login" onClick={toggleNav}>login</div></Link>
+            <div className="hamburger-menu" onClick={toggleNav}>
+              <div className="bar" id="barone" ></div>
+              <div className="bar" id="bartwo"></div>
+              <div className="bar" id="barthree"></div>
             </div>
-
-          ):<div className="hidden"></div>
+          ):<div className="hamburger-menu" onClick={toggleNav}>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
         }
-        {/*end of mobile nav */}
-        <Routes>
-          <Route path="/" element={
-            <Home/>
-          }/>
-          <Route path="/signup" element={<Signup />}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/housekeeping" element={<BookingRules/>}/>
-        </Routes>
+      </div>
+
+      {
+        showNav ? (
+          <div className="mobile-nav">
+            {toggleNav}
+            <MobileNav/>
+          </div>
+
+        ):<div className="hidden">
+            {toggleNav}
+            <MobileNav/>
+        </div>
+      }
+
+      <Routes>
+        <Route path="/" element={
+          <Home/>
+        }/>
+        <Route path="/signup" element={<Signup />}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/housekeeping" element={<BookingRules/>}/>
+      </Routes>
       {/* <div className='closing-banner'>
         <h4>
           Thankyou for being

@@ -1,14 +1,8 @@
 import React from 'react'
 
-import '../SASS/Hero.scss'
+import '../scss/Hero.scss'
 const Hero = (props: any) => {
     return (
-        //wings/ weave install
-        //crochett
-        //microlinks
-        //perminant makeup
-        //makeup
-
         <>
             <div className='Hero'>
                 <div className='speciality wigs'>

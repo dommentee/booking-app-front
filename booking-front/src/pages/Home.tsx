@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom'
 
-import '../SASS/Home.scss';
+import '../scss/pages/home.scss';
 
 const Home = (props: any ) => {
     //navaget is used to route for different button 
