@@ -13,61 +13,6 @@
 
 @media (min-width: 375px) {
     
-    .header {
-        width: 100%;
-        padding: 5px 4%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        // background: -webkit-linear-gradient( #fcfafa, #fcfbfb);
-        background-color: var(--background-color);
-        // background-color: #fafafa;
-        font-size: 1em;
-        a {
-            text-decoration: none;
-            color: #3D3D3D;
-        }
-        .home-button {
-            padding: 37px;
-            background: url('../../public/images/nikita-logo1.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-        .desktop-nav {
-            display: none;
-        }
-        .bar{
-            width: 30px;
-            height: 2px;
-            margin: 5px 0;
-            // background-color: #B76E79;
-            background-color: #E26678;
-            transition: 0.2s;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        #barone {
-            display: none;
-            opacity: 0;
-            transition: .2s;
-            overflow: hidden;
-        }
-        #bartwo {
-            transform: rotate(-40deg) translate(-5px, 5px);
-            transition: .2s;
-        }
-        #barthree {
-            transform: rotate(40deg);
-            transition: .2s
-        }
-        .hamburger-menu {
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
     .sticky {
         position: sticky;
         top: 0;
@@ -85,30 +30,6 @@
         flex-direction: column;
         align-items: center;
 
-        .book-now {
-            // background-color: #B76E79;
-            background-color: #E26678;
-            // border: 2px solid #B76E79;
-            // color: #B76E79;
-            color: #EDEDED;
-            border-radius: 5px;
-            padding: 8px 12px;
-
-            @keyframes pulse {
-                0% { box-shadow: 0 0 0 0 #B76E79; };
-            }
-
-            &:hover {
-                animation: pulse 1s;
-                box-shadow: 0 0 0 2em transparent;
-            }
-            // &:hover {
-            //     transition: 1s ease-in-out;
-            //     box-shadow: inset 0 0 0 2em #B76E79;
-            //     color: #EDEDED
-            // }
-        }
-    
         a {
             width: 50%;
             color: #3D3D3D;
@@ -131,7 +52,7 @@
     .hidden {
         width: 0%;
     }  
-    
+
     .closing-banner {
         background-color: #E26678;
         background: -webkit-linear-gradient( #E26678, #e05c9a,);

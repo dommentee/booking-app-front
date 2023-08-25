@@ -2,34 +2,30 @@
     
     .header {
         width: 100%;
-        padding: 15px 4%;
+        padding: 5px 4%;
         display: flex;
-        // align-items: center;
+        align-items: center;
         justify-content: space-between;
         // background: -webkit-linear-gradient( #fcfafa, #fcfbfb);
-        background-color: #f3f3f3;
+        background-color: var(--background-color);
         // background-color: #fafafa;
         font-size: 1em;
-        position: relative;
         a {
-          text-decoration: none;
-          color: #3D3D3D;
+            text-decoration: none;
+            color: #3D3D3D;
         }
         .home-button {
-          font-weight: bolder;
-          font-size: 1.2em;
-        //   font-family: 'Pacifico', cursive;
-        //   font-family: 'Alfa Slab One', cursive;
-          &:hover {
-           color:  rgba(68, 70, 230, 0.884); 
-            cursor: pointer;
-          }
+            padding: 37px;
+            background: url('../../../public/images/nikita-logo1.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
         }
         .desktop-nav {
             display: none;
         }
         .bar{
-            width: 28px;
+            width: 30px;
             height: 2px;
             margin: 5px 0;
             // background-color: #B76E79;
@@ -57,113 +53,6 @@
             &:hover {
                 cursor: pointer;
             }
-        }
-    }
-    .sticky {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-    .mobile-nav {
-        top: 50%;
-        left: 50%;
-        /* bring your own prefixes */
-        transform: translate(-50%, -50%);
-        width: 100%;
-        z-index: 1;
-        height: 100vh;
-        position: fixed;
-        overflow: hidden;
-        float: left;
-        transition: .2s ease-in-out;
-        background-color: #EDEDED;
-        background: -webkit-linear-gradient( #fcfafa, #fcfbfb);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .book-now {
-            // background-color: #B76E79;
-            background-color: #E26678;
-            // border: 2px solid #B76E79;
-            // color: #B76E79;
-            color: #EDEDED;
-            border-radius: 5px;
-            padding: 8px 12px;
-
-            @keyframes pulse {
-                0% { box-shadow: 0 0 0 0 #B76E79; };
-            }
-
-            &:hover {
-                animation: pulse 1s;
-                box-shadow: 0 0 0 2em transparent;
-            }
-            // &:hover {
-            //     transition: 1s ease-in-out;
-            //     box-shadow: inset 0 0 0 2em #B76E79;
-            //     color: #EDEDED
-            // }
-        }
-    
-        a {
-            width: 50%;
-            color: #3D3D3D;
-            display: inline-block;
-            padding: 5px 0;
-            margin: 5px 0;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1.5em;
-            font-weight: 500;
-            &:hover {
-            }
-        }
-
-    }
-    .hidden {
-        width: 0;
-        height: 100%;
-        float: right;
-        background-color: #e7e7e7;
-        overflow: hidden;
-        position: absolute;
-        z-index: 1;
-        transition: .2s ease-in-out;
-    }  
-    .closing-banner {
-        background-color: #E26678;
-        background: -webkit-linear-gradient( #E26678, #e05c9a,);
-        width: 100%;
-        text-align: center;
-        // background-color: #B76E79;
-        // background-color: linear-gradient( #E26678 );
-        .book-now {
-            margin: 0 auto;
-            display: inline-block;
-            text-decoration: none;
-            padding: 14px 120px;
-            // background-color: #B76E79;
-            border: 2px solid #E26678;
-            background-color: #fafafa;
-            // border: 2px solid #B76E79;
-            color: #E26678;
-            border-radius: 5px;
-
-            @keyframes pulse {
-                0% { box-shadow: 0 0 0 0 #E26678; };
-            }
-
-            &:hover {
-                animation: pulse 1s;
-                box-shadow: 0 0 0 2em transparent;
-            }
-            // &:hover {
-            //     transition: 1s ease-in-out;
-            //     box-shadow: inset 0 0 0 2em #B76E79;
-            //     color: #EDEDED
-            // }
-
         }
     }
 }
