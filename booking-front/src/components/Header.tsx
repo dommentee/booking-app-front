@@ -42,7 +42,7 @@ const Header = (props: any) => {
 
       {/* toggle nav with menue */}
       {
-        props.showNav ? (
+        showNav ? (
           <div className="hamburger-menu" onClick={toggleNav}>
             <div className="bar" id="barone" ></div>
             <div className="bar" id="bartwo"></div>

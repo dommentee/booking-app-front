@@ -1,31 +1,26 @@
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-
-//components 
-import Home from './pages/Home'
-import Header from './components/Header';
-import Hero from './components/Hero'
-import Signup from './pages/Signup';
-import Login from './pages/Login';
-import Footer from './components/Footer';
+//components
+import Home from "./pages/Home";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import Footer from "./components/Footer";
 
 //style
-import './scss/app.scss';
-import BookingRules from './pages/BookingRules';
-
+import "./scss/app.scss";
+import BookingRules from "./pages/BookingRules";
 
 const App = () => {
-
   return (
     <div className="container">
       <Header />
       <Routes>
-        <Route path="/" element={
-          <Home/>
-        }/>
-        <Route path="/signup" element={<Signup />}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/housekeeping" element={<BookingRules/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/housekeeping" element={<BookingRules />} />
       </Routes>
 
       {/* <div className='closing-banner'> //needs to be a component
@@ -40,8 +35,7 @@ const App = () => {
       </div> */}
       <Footer />
     </div>
-  )
-
-}
+  );
+};
 
 export default App;
