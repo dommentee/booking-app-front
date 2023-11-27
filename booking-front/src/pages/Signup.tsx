@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios, { AxiosResponse } from "axios";
 import { api } from "../helpers/api";
 import { User } from "../helpers/User";
@@ -7,23 +8,39 @@ const currentApi = api(api);
 
 const Signup = (props: any) => {
   const defaultForm = { firstName: "", lastName: "", email: "", password: "" };
-  let [newUser, setNewUSer] = useState(defaultForm);
+  const [newUser, setNewUSer] = useState(defaultForm);
+
+  const [showErrorMsg, setErrorMsg] = useState(false);
+
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e: any) => {
     setNewUSer({ ...newUser, [e.target.name]: e.target.value });
   };
 
-  const createUser = (newUSer: User) => {
-    axios
-      .post(`${currentApi}/auth/register`, newUSer)
-      .then((response: AxiosResponse<any>) => {
-        console.log(response);
-      })
-      .catch((err) => console.error(err.message));
-    console.log(JSON.stringify(newUSer));
+  const createUser = async (newUSer: User) => {
+    try {
+      const response: AxiosResponse<any> = await axios.post(
+        `${currentApi}/auth/register`,
+        newUSer
+      );
+      return response;
+    } catch (error: any) {
+      if (error) {
+        console.error(error.message);
+        setErrorMsg(true);
+        setErrorMessage(error.response.data.msg);
+        throw new Error(error.response.data.msg);
+      } else {
+        setErrorMsg(true);
+        throw new Error(error.response.data.msg);
+      }
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const navagate = useNavigate();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (
       !newUser.firstName ||
@@ -33,11 +50,18 @@ const Signup = (props: any) => {
     ) {
       return;
     }
-    createUser(newUser);
+
+    try {
+      await createUser(newUser);
+      navagate("/login");
+    } catch (error: any) {
+      console.error(error.message);
+    }
   };
 
   return (
     <div className="form-wrap">
+      {showErrorMsg ? <div className="form-erros">{errorMessage}</div> : <></>}
       <h3>Sign up</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="first name">first name</label>
